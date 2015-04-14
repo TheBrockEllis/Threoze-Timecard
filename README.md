@@ -4,7 +4,7 @@ A large, full-screen kiosk to be sued at the HQ of Sycamore Education.
 Build using initializr.com, Bootstrap, jQuery, Threoze public API and nw.js 
 
 ## Build instructions
- - build using `node ./node_modules/node-webkit-builder/bin/nwbuild -r path/to/nwapp`
+ - build using `nwbuild -o /home/brock/code/Threoze-Timecard/.builds -r --buildType versioned /home/brock/code/Threoze-Timecard/`
 
 ## To Do
 - [ ] Add button to leave kiosk mode
