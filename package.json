@@ -1,9 +1,13 @@
 {
-  "name": "Threoze Timecard Kiosk",
+  "name": "Threoze-Timecard-Kiosk",
+  "version": "0.0.1",
   "main": "index.html",
   "window": {
+    "frame": false,
     "toolbar": false,
-    "width": 800,
-    "height": 600
+    "kiosk": true
+  },
+  "devDependencies": {
+    "node-webkit-builder": "^1.0.11"
   }
 }

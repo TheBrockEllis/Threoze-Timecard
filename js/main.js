@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+    $("#leavekiosk").click(function(){
+      var gui = require('nw.gui');
+      gui.Window.get().leaveKioskMode();
+    });
     
     $("#numpad").numpad({
     	input: ".inputs"
