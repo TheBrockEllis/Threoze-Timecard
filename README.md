@@ -10,7 +10,7 @@ Build using initializr.com, Bootstrap, jQuery, Threoze public API and nw.js
 
 ## Packing insructions 
  - Use [node-webkit-builder](https://github.com/mllrsohn/node-webkit-builder) to help run and package app for multiple platforms
- - `npm install node-webkit-builder -g`  
+ - `npm install` to install nwbuild locally  
  - Build app for local developing/testing: `nwbuild -r ./` 
  - Package app for distribution: `nwbuild -p platform ./`
   - Platforms can be found on nwbuilder README file
