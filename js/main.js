@@ -1,17 +1,20 @@
 var gui = require('nw.gui');
 
 $(document).ready(function(){
-
-    $("#leavekiosk").click(function(){
-      gui.Window.get().leaveKioskMode();
+    $("#changekiosk").click(function(){
+      var elm = $(this);
+      var kioskStatus = elm.data("kiosk");
+      if(kioskStatus == 1){
+        gui.Window.get().leaveKioskMode();
+        elm.html("Enter Kiosk").data("kiosk", 0);
+      }else{
+        gui.Window.get().enterKioskMode();
+        elm.html("Exit Kiosk").data("kiosk", 1);
+      }
     });
     
     $("#numpad").numpad({
     	input: ".inputs"
-    });
-
-    $("#leavekiosk").click(function(){
-      gui.Window.get().leaveKioskMode();
     });
     
     $("#theForm").submit(function(event){
