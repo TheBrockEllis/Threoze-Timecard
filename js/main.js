@@ -1,12 +1,17 @@
+var gui = require('nw.gui');
+
 $(document).ready(function(){
 
     $("#leavekiosk").click(function(){
-      var gui = require('nw.gui');
       gui.Window.get().leaveKioskMode();
     });
     
     $("#numpad").numpad({
     	input: ".inputs"
+    });
+
+    $("#leavekiosk").click(function(){
+      gui.Window.get().leaveKioskMode();
     });
     
     $("#theForm").submit(function(event){
@@ -59,5 +64,24 @@ $(document).ready(function(){
         $("#pin").val("");
         $("#message").empty();
     }
+    
+    function displayClock(){
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      //console.log(s);
+      $("#clock").html(h+":"+m+":"+s);
+      var t = setTimeout(function(){displayClock()},1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) i = "0" + i;  // add zero in front of numbers < 10
+      return i;
+    }
+    
+    displayClock();
     
 }); //end document ready
