@@ -13,6 +13,10 @@ $(document).ready(function(){
       }
     });
     
+    $("#exitapp").click(function(){
+      gui.App.quit();
+    });
+    
     $("#numpad").numpad({
     	input: ".inputs"
     });
