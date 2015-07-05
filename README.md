@@ -13,7 +13,8 @@ Build using initializr.com, Bootstrap, jQuery, Threoze public API and nw.js
 ## Packing insructions 
  - Use [node-webkit-builder](https://github.com/mllrsohn/node-webkit-builder) to help package app for multiple platforms
  - `npm install node-webkit-builder -g`  
- - Build using `nwbuild -o /home/brock/code/Threoze-Timecard/.builds -r --buildType versioned /home/brock/code/Threoze-Timecard/`
+ - Build using `nwbuild -p platform ./`
+  - Platforms can be found on nwbuilder README file
 
 ## To Do
 - [x] Add button to leave kiosk mode
